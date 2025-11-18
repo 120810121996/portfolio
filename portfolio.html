@@ -1,230 +1,320 @@
-<!Doctype html>
-<HTML>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KANNE TAMIBE KOCHIAKE-D ata Scientist</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANNE TAMIBE KOCHIAKE - Data Scientist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style pour justifier uniquement le texte About Me */
+        .about-text p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        /* Style pour augmenter la taille de police de la navigation */
+        nav a {
+            font-size: 1.5rem !important;
+        }
+        
+        .theme-toggle {
+            font-size: 1.2rem !important;
+        }
+    </style>
+</head>
 
-    ,<body>
-        <header>
-            <div class="container">
-                <h1>KANNE TAMIBE KOCHIAKE <br><p class="petit">Data Scientist</p> </h1>
-                <!--<p>Data Scientist</p>-->
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>KANNE TAMIBE KOCHIAKE</h1>
+                    <p class="petit">Data Scientist & AI Engineer</p>
+                </div>
                 <nav>
                     <ul>
-                        <li><a href="#about">About me</a></li>
-                        <li><a href="#skills">skills</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><button onclick="changerCouleur()">Change color</button></li>
-                        <script>
-                            function changerCouleur() {
-                                let couleurActuelle = getComputedStyle(document.body).backgroundColor;
-                        
-                                // Vérifier si la couleur actuelle correspond à #141b54 (en RGB)
-                                if (couleurActuelle === "rgb(20, 27, 84)") {
-                                    document.body.style.backgroundColor = "white";
-                                } else {
-                                    document.body.style.backgroundColor = "#141b54";
-                                }
-                            }
-                        </script>
-                        
+                        <li><button class="theme-toggle" onclick="toggleTheme()">
+                            <i class="fas fa-palette"></i> Theme
+                        </button></li>
                     </ul>
                 </nav>
             </div>
-        </header>
-        <section id="about" class="about">
-            <div class="container22">
-                <div><img src="/home/student/Documents/Programming-Exercises/projects/PORTFOLIO/tami.jpeg"></div>
-                <div class="about">
-                    <h2>About me</h2>
-                    <p>I'm KANNE TAMIBE KOCHIAKE, a data scientist with a passion for harnessing data to make impactful decisions.I work with organizations looking to get the most out of their data, whether it's structuring data collection, ensuring high-quality data management, building predictive models or delivering clear, actionable insights.
+        </div>
+    </header>
 
-                        Thanks to my expertise in data mining, machine learning and deep learning, I support every stage of the data journey from pre-processing and data analysis to the development of intelligent decision-making tools. My experience includes credit risk analysis, customer segmentation and AI-based image classification, helping companies and institutions leverage data for smarter strategies.
-                        
-                        I am available for longer-term projects and part-time commitments.</p></div>
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="profile-image">
+                    <img   src="tami.jpeg" alt="Kanne Tamibe Kochiake">
+                </div>
+                <div class="about-text">
+                    <!--<h2>Transforming Data into Insights</h2>-->
+                    <p>I'm KANNE TAMIBE KOCHIAKE, a data scientist with a passion for harnessing data to make impactful decisions.I work with organizations looking to get the most out of their data, whether it's structuring data collection, ensuring high-quality data management, building predictive models or delivering clear, actionable insights. Thanks to my expertise in data mining, machine learning and deep learning, I support every stage of the data journey from pre-processing and data analysis to the development of intelligent decision-making tools. My experience includes credit risk analysis, customer segmentation and AI-based image classification, helping companies and institutions leverage data for smarter strategies. I am available for longer-term projects and part-time commitments.</p>
+                </div>
             </div>
-        </section>
-    
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2>skills</h2>
-                <!--<div class="skill-countainer">
-                    <h3>Professional Skills</h3>
+        </div>
+    </section>
+
+    <section id="skills" class="skills fade-in">
+        <div class="container">
+            <h2 class="section-title">Professional Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
                     <ul>
-                        <li>Machine Learning (Supervised and Unsupervised Learning</li>
-                        <li>Data Analysis and Visualization (Power BI, Matplotlib, Seaborn)</li>
-                        <li>Data Mining (R and Python)</li>
-                        <li>Database Management</li>
-                        <li>Data Preprocessing</li>
-                        <li>Deep Learning</li>
-                        <li>Web Scraping</li>
-                        <li>Problem Solving</li>
-                        <li>Python, R, SQL</li>
+                        <li>Classification (Binary, Multiclass): SVM, Decision Trees, Random Forest, Clustering, k-NN</li>
+                        <li>Regression (Linear and Logistic)</li>
+                        <li>Model Evaluation and Validation</li>
                     </ul>
-                </div>-->
-                <h2> Professional Skills</h2>
-                <div class="skills-container">
-                    <div class="skill">
-                        <p><strong>Machine Learning (Supervised and Unsupervised Learning)</strong></p><br>
-                        <ul>
-                            <li> 📌 Classification (Binary, multiclasses): <br> SVM, Decision trees, Random Forest, Clustering, k-NN ...</li>
-                            <li> 📌 Regression (Linear and logistics)</li>
-                        </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</h3>
+                    <ul>
+                        <li>Data Visualization (Scatter plots, Bar charts, Pie charts)</li>
+                        <li>Hypothesis Testing (t-test, Z-test, Chi-square, ANOVA)</li>
+                        <li>Descriptive Statistical Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Data Mining & Management</h3>
+                    <ul>
+                        <li>Anomaly Detection and Pattern Recognition</li>
+                        <li>Dimensionality Reduction (PCA, FA)</li>
+                        <li>SQL Fundamentals and Data Manipulation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Data Preprocessing</h3>
+                    <ul>
+                        <li>Data Cleaning and Transformation</li>
+                        <li>Feature Engineering and Construction</li>
+                        <li>Handling Imbalanced Data</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> Deep Learning</h3>
+                    <ul>
+                        <li>Computer Vision (CNN, ResNet, YOLO, Segmentation)</li>
+                        <li>Natural Language Processing</li>
+                        <li>Neural Network Architectures</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Technical Stack</h3>
+                    <ul>
+                        <li><strong>Languages:</strong> Python, R, SQL</li>
+                        <li><strong>Frameworks:</strong> TensorFlow, PyTorch, Scikit-learn</li>
+                        <li><strong>Tools:</strong> Pandas, NumPy, Power BI, Git</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <ul>
+                        <li>Classification (Binary, Multiclass): SVM, Decision Trees, Random Forest, Clustering, k-NN</li>
+                        <li>Regression (Linear and Logistic)</li>
+                        <li>Model Evaluation and Validation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</h3>
+                    <ul>
+                        <li>Data Visualization (Scatter plots, Bar charts, Pie charts)</li>
+                        <li>Hypothesis Testing (t-test, Z-test, Chi-square, ANOVA)</li>
+                        <li>Descriptive Statistical Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    </div>
-                    <div class="skill">
-                        <div><p><strong>Data Analysis and Visualization </strong></p></div>
-                        <div> <ul>
-                            <!--<li>📌 Data handling (data cleaning and transformation)</li>-->
-                            <li> 📌 Data visualization (Scatter plot, barplot,pie...)</li>
-                            <li> 📌 Hypothesis testing (Student's t-test , Z test, Chi-2 test, ANOVA ...)</li>
-                            <li> 📌 Descriptive statistical analysis (univariate, bivariate and multivariate)</li>
-
-                            <!--<li> 📌 Dimensional reduction (Principal Component Analysis, Factor analysis)</li>-->
-                        </ul></div>
-                    </div>
-                    <div class="skill">
-                        <div><p><strong>Data Mining </strong></p></div>
-                        <div>
-                            <ul>
-                                <li> 📌 Anomaly detection:<br>  Data errors, Atypical behavior rare but important events
-                                </li>
-                                <li> 📌 Dimensionality reduction (PCA, FA).</li>
-                            </ul>
+    <section id="projects" class="projects fade-in">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h3><a href="https://github.com/120810121996/Project_1-E-commerce-Customer-Behavior-Analysis" target="_blank">
+                                <i class="fas fa-shopping-cart"></i> E-commerce Customer Behavior Analysis
+                            </a></h3>
+                            <p>Comprehensive analysis of e-commerce customer behavior using a dataset of 350 customers with 11 variables. Identified key insights for improving customer experience and marketing strategies through exploratory analysis and linear regression.</p>
+                            <p><strong>Key Findings:</strong> Gold customers and San Francisco residents are the biggest buyers, with men spending slightly more than women.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="shop.jpeg" alt="E-commerce Analysis">
                         </div>
                     </div>
-                    <div class="skill"> 
-                        <div><strong>Relational database</strong></div>
-                        <div>
-                            <ul>
-                                <li> 📌 SQL fundamentals (Basic Query, Joins, Data Aggregation)</li>
-                                <li> 📌 Data manipulation (Inserting data, Updating data, Deleting data, Creating and modifying tables)</li>
-                            </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h3><a href="https://github.com/120810121996/Human-action-recognition" target="_blank">
+                                <i class="fas fa-running"></i> Human Action Recognition
+                            </a></h3>
+                            <p>Developed a model for recognizing human actions in videos by comparing 3D CNN and MobileNetV2 with LSTM architectures. The transfer learning approach achieved 95% accuracy, significantly outperforming the 3D CNN model (72%).</p>
+                            <p><strong>Technologies:</strong> Deep Learning, Computer Vision, Transfer Learning</p>
                         </div>
-                    </div>
-                    <div class="skill"><strong>Data Preprocessing </strong><br>
-                        <ul>
-                            <li> 📌 Data Cleaning (Missing value, Duplicate data, Format error , Outlier...)</li>
-                            <li> 📌 Data Transformation (Binning, Data standardization,
-                                Encoding)</li>
-                            <li> 📌 Feature Engineering and Feature Construction</li>
-                            <li> 📌 Handling Imbalanced Data (Oversampling, Undersampling, Stratified Samoling...) </li>
-                        </ul>
-                    </div>
-                    <div class="skill"><strong>Deep Learning</strong><br>
-                        <ul>
-                            <li> 📌 Computer Vision: Classification (ResNet, DenseNet, CNN), object detection (YOLO, Faster R-CNN), segmentation (U-Net, Mask Rcnn).</li>
-                            <li> 📌 NLP (Natural Language Processing): sentiment analysis, information extraction, text classification.</li>
-                        </ul>
-                    </div>
-                    <div class="skill"><strong>Web Scraping</strong></div>
-                    <div class="skill"><strong>Problem Solving</strong></div>
-                    <div class="skill"><strong>Communication & Storytelling with data</strong></div>
-                    
-                </div> 
-                <h2> Technical Skills</h2>
-                <div class="skills-container">
-                    <div class="skill">Programming Languages: Python, R, SQL</div>
-                    <div class="skill">ML Frameworks: TensorFlow, PyTorch, Scikit-learn, Keras, OpenCV, Spacy, ggplot2 </div>
-                    <div class="skill">Data Tools: Pandas, NumPy, tidyverse, Matplotlyb, Orange, Power BI, Microsoft Excel</div>
-                    <div class="skill">Development Environments and Tools: Jupyter Notebooks, Colab , Vscode and Rstudio</div>
-                    <div class="skill">Pack office (Excel, Word and PowerPoint)</div>
-                    <div class="skill">Version Control – Git,GitHub</div>
-                </div>
-            </div>
-        </section>
-    
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Projetcs</h2>
-                <div class="project">
-                    <h3><strong><a href="https://github.com/120810121996/Project_1-E-commerce-Customer-Behavior-Analysis"  target="_blank">E-commerce customer behavior analysis</a></strong></h3>
-                   <div class="con">
-                    <p>This project analyzes the behavior of an e-commerce platform's customers, based on a dataset comprising 350 customers and 11 variables (demographics, spending, satisfaction, etc.). The aim is to identify insights for improving customer experience and marketing strategies. Exploratory analysis reveals that Gold customers (spending an average of $1250) and San Francisco customers ( $1459) and San Francisco customers ($1459) are the biggest buyers. Men spend slightly more than women, and satisfied customers buy more items. Linear regression shows that age, city and number of items purchased influence spending. Recommendations include: targeting high-end customers, strengthening loyalty programs, and adopting gender-neutral marketing strategies. </p>
-                    <img class="shop" src="/home/student/Documents/Programming-Exercises/projects/PORTFOLIO/shop.jpeg">
-                   </div>
-                </div>
-                <div class="project">
-                    <h3><a href="https://github.com/120810121996/Human-action-recognition" target="_blank"> Human Action Recognition</a></h3>
-                    <div class="con">
-                        <p>The aim of this project is to develop a model for recognizing 
-                            human actions in videos (waving, writing, sitting, walking...) by comparing two deep learning architectures 
-                            architectures: a 3D CNN model built from scratch and a model based on
-                             MobileNetV2 with LSTM layers (transfer learning). The results 
-                            show that the transfer learning approach clearly outperforms the 
-                            3D CNN model, with an accuracy of 95% vs. 72% in test
-                             in test. The more efficient and generalizable MobileNet+LSTM 
-                            the best solution for this task, 
-                            paving the way for future improvements such as the integration of attention 
-                            attention mechanisms or optimization for real-time use.
-                            
-                        </p>
-                        <img class="shop" src="/home/student/Documents/Programming-Exercises/projects/PORTFOLIO/recon.jpg">
-                    </div>
-                </div>
-                <div class="project">
-                    <h3> <a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank"> Climate Change Impact on Agriculture Analysis (1970-2023)</a></h3>
-                    <div class="con">
-                        <p>This study of 10,000 data points reveals crop yields are primarily impacted by CO₂ (-0.006t/ha per MT) and extreme weather events (>3/year), with significant regional variations. Investments (+0.002t/ha per M$) and moderate temperatures (15-25°C) boost productivity. The Random Forest model (RMSE=0.48) predicts a 20% yield decline risk by 2030 in vulnerable regions. Key recommendations: adapt crops, optimize irrigation, and reduce CO₂ emissions in critical zones.</p>
-                    <img class="shop" src="/home/student/Documents/Programming-Exercises/projects/PORTFOLIO/crop.jpeg">
-                    </div>
-                </div>
-                <div class="project">
-                    <h3> <a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank">Tomato Leaf Disease Detection</a></h3>
-                    <div class="con">
-                        <p>The goal of this project is to develop an automated system for detecting and classifying tomato leaf diseases from images. We trained the YOLOv8 model to accurately identify 10 distinct disease categories: Tomato mosaic virus, Target Spot, Bacterial spot, Tomato Yellow Leaf Curl Virus, Late blight, Leaf Mold, Early blight, Spider mites (Two-spotted spider mite), Septoria leaf spot, as well as healthy leaves (Tomato healthy). Leveraging advanced computer vision and deep learning techniques, the model achieved an impressive 92% accuracy in distinguishing specific disease symptoms (spots, discoloration, mold patterns, etc.). This high-performance system enables farmers to rapidly diagnose infections, implement targeted treatments, and minimize crop yield losses, ultimately supporting more sustainable and productive agricultural practices. The model's strong performance demonstrates the effectiveness of YOLOv8 architecture for plant disease recognition tasks.</p>
-                        <img class="shop" src="/home/student/Documents/Programming-Exercises/projects/tomato/set/train/images/0a2b122a-0f23-4c92-8b7a-21b274dffbe5___Com_G_SpM_FL-9350_JPG.rf.8b3dca12448d73702b159b49711e7270.jpg">
+                        <div class="project-image">
+                            <img src="recon.jpg" alt="Action Recognition">
+                        </div>
                     </div>
                 </div>
 
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank">
+                                <i class="fas fa-seedling"></i> Climate Change Impact on Agriculture
+                            </a></h3>
+                            <p>Analysis of 10,000 data points revealing crop yield impacts from CO₂ levels and extreme weather events. Random Forest model predicts 20% yield decline risk by 2030 in vulnerable regions.</p>
+                            <p><strong>Recommendations:</strong> Crop adaptation, optimized irrigation, and CO₂ reduction strategies.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="crop.jpeg" alt="Agriculture Analysis">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank">
+                                <i class="fas fa-leaf"></i> Tomato Leaf Disease Detection
+                            </a></h3>
+                            <p>Automated system for detecting and classifying tomato leaf diseases using YOLOv8 model. Achieved 92% accuracy in identifying 10 distinct disease categories, enabling rapid diagnosis and targeted treatment for farmers.</p>
+                            <p><strong>Impact:</strong> Supports sustainable agricultural practices and minimizes crop losses.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="tomato.jpeg" alt="Disease Detection">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-        <!--<section id="contact" class="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <p class="koi">You can contact me via this email : <a href="mailto:kochiake.kann@aims-cameroon.org">kochiake.kann@aims-cameroon.org</a></p>
-            </div>
-        </section>-->
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-info">
-                    <!-- Coordonnées -->
-                    <p class="contact-item">
-                        <i class="fas fa-envelope"></i> Email : 
-                        <a href="mailto:kochiake.kann@aims-cameroon.org">kochiake.kanne@aims-cameroon.org</a>
-                    </p>
-                    
-                    <p class="contact-item">
-                        <i class="fab fa-linkedin"></i> LinkedIn : 
+        </div>
+    </section>
+
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:kochiake.kanne@aims-cameroon.org">kochiake.kanne@aims-cameroon.org</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <strong>LinkedIn</strong><br>
                         <a href="https://www.linkedin.com/in/kochiake-kanne-tamibe-5a42882b7/" target="_blank">Kanne Tamibe Kochiake</a>
-                    </p>
-                    
-                    <p class="contact-item">
-                        <i class="fab fa-github"></i> GitHub : 
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <strong>GitHub</strong><br>
                         <a href="https://github.com/kanne-tamibe-kochiake" target="_blank">Kanne Tamibe Kochiake</a>
-                    </p>
-                    
-                    <!-- Localisation et disponibilité -->
-                    <p class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i> Localisation : Limbe, Cameroun
-                    </p>
-                    
-                    <p class="availability">
-                        <i class="fas fa-globe"></i> Availability : <span class="highlight">Open to remote work</span>
-                    </p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Location</strong><br>
+                        Limbe, Cameroon
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <strong>Availability</strong><br>
+                        <span class="availability">Remote/Full time</span>
+                    </div>
                 </div>
             </div>
-        </section>
-    
-        <footer>
-            <div class="container">
-                <p>&copy; 2025 KANNE  TAMIBE  KOCHIAKE</p>
-            </div>
-        </footer>
-    </body>
-</HTML>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 KANNE TAMIBE KOCHIAKE - Data Scientist & AI Engineer</p>
+            <p>Transforming data into actionable intelligence</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion du thème améliorée
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const isLightMode = document.body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+            
+            // Animation smooth
+            document.documentElement.style.transition = 'all 0.3s ease';
+            setTimeout(() => {
+                document.documentElement.style.transition = '';
+            }, 300);
+        }
+
+        // Charger le thème sauvegardé
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+
+            // Animation au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('loaded');
+                    }
+                });
+            }, observerOptions);
+
+            // Observer les éléments à animer
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Smooth scrolling pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
