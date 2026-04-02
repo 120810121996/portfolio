@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +13,20 @@
             text-align: justify;
             text-justify: inter-word;
         }
-        
-        /* Style pour augmenter la taille de police de la navigation */
+
+        /* Style pour la navigation */
         nav a {
-            font-size: 1.5rem !important;
+            font-size: 1.1rem;
         }
-        
+
         .theme-toggle {
-            font-size: 1.2rem !important;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -39,8 +46,8 @@
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><button class="theme-toggle" onclick="toggleTheme()">
-                            <i class="fas fa-palette"></i> Theme
-                        </button></li>
+                                <i class="fas fa-palette"></i> Theme
+                            </button></li>
                     </ul>
                 </nav>
             </div>
@@ -52,11 +59,19 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="profile-image">
-                    <img   src="tami.jpeg" alt="Kanne Tamibe Kochiake">
+                    <img src="tami.jpeg" alt="Kanne Tamibe Kochiake">
                 </div>
                 <div class="about-text">
                     <!--<h2>Transforming Data into Insights</h2>-->
-                    <p>I'm KANNE TAMIBE KOCHIAKE, a data scientist with a passion for harnessing data to make impactful decisions.I work with organizations looking to get the most out of their data, whether it's structuring data collection, ensuring high-quality data management, building predictive models or delivering clear, actionable insights. Thanks to my expertise in data mining, machine learning and deep learning, I support every stage of the data journey from pre-processing and data analysis to the development of intelligent decision-making tools. My experience includes credit risk analysis, customer segmentation and AI-based image classification, helping companies and institutions leverage data for smarter strategies. I am available for longer-term projects and part-time commitments.</p>
+                    <p>I'm KANNE TAMIBE KOCHIAKE, a data scientist with a passion for harnessing data to make impactful
+                        decisions.I work with organizations looking to get the most out of their data, whether it's
+                        structuring data collection, ensuring high-quality data management, building predictive models
+                        or delivering clear, actionable insights. Thanks to my expertise in data mining, machine
+                        learning and deep learning, I support every stage of the data journey from pre-processing and
+                        data analysis to the development of intelligent decision-making tools. My experience includes
+                        credit risk analysis, customer segmentation and AI-based image classification, helping companies
+                        and institutions leverage data for smarter strategies. I am available for longer-term projects
+                        and part-time commitments.</p>
                 </div>
             </div>
         </div>
@@ -69,12 +84,13 @@
                 <div class="skill-category">
                     <h3><i class="fas fa-brain"></i> Machine Learning</h3>
                     <ul>
-                        <li>Classification (Binary, Multiclass): SVM, Decision Trees, Random Forest, Clustering, k-NN</li>
+                        <li>Classification (Binary, Multiclass): SVM, Decision Trees, Random Forest, Clustering, k-NN
+                        </li>
                         <li>Regression (Linear and Logistic)</li>
                         <li>Model Evaluation and Validation</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</h3>
                     <ul>
@@ -83,7 +99,7 @@
                         <li>Descriptive Statistical Analysis</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-database"></i> Data Mining & Management</h3>
                     <ul>
@@ -92,7 +108,7 @@
                         <li>SQL Fundamentals and Data Manipulation</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-cogs"></i> Data Preprocessing</h3>
                     <ul>
@@ -101,7 +117,7 @@
                         <li>Handling Imbalanced Data</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-robot"></i> Deep Learning</h3>
                     <ul>
@@ -110,7 +126,7 @@
                         <li>Neural Network Architectures</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-tools"></i> Technical Stack</h3>
                     <ul>
@@ -119,15 +135,16 @@
                         <li><strong>Tools:</strong> Pandas, NumPy, Power BI, Git</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <!-- <div class="skill-category">
                     <h3><i class="fas fa-brain"></i> Machine Learning</h3>
                     <ul>
-                        <li>Classification (Binary, Multiclass): SVM, Decision Trees, Random Forest, Clustering, k-NN</li>
+                        <li>Classification (Binary, Multiclass): SVM, Decision Trees, Random Forest, Clustering, k-NN
+                        </li>
                         <li>Regression (Linear and Logistic)</li>
                         <li>Model Evaluation and Validation</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</h3>
                     <ul>
@@ -135,7 +152,7 @@
                         <li>Hypothesis Testing (t-test, Z-test, Chi-square, ANOVA)</li>
                         <li>Descriptive Statistical Analysis</li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -147,11 +164,15 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/Project_1-E-commerce-Customer-Behavior-Analysis" target="_blank">
-                                <i class="fas fa-shopping-cart"></i> E-commerce Customer Behavior Analysis
-                            </a></h3>
-                            <p>Comprehensive analysis of e-commerce customer behavior using a dataset of 350 customers with 11 variables. Identified key insights for improving customer experience and marketing strategies through exploratory analysis and linear regression.</p>
-                            <p><strong>Key Findings:</strong> Gold customers and San Francisco residents are the biggest buyers, with men spending slightly more than women.</p>
+                            <h3><a href="https://github.com/120810121996/Project_1-E-commerce-Customer-Behavior-Analysis"
+                                    target="_blank">
+                                    <i class="fas fa-shopping-cart"></i> E-commerce Customer Behavior Analysis
+                                </a></h3>
+                            <p>Comprehensive analysis of e-commerce customer behavior using a dataset of 350 customers
+                                with 11 variables. Identified key insights for improving customer experience and
+                                marketing strategies through exploratory analysis and linear regression.</p>
+                            <p><strong>Key Findings:</strong> Gold customers and San Francisco residents are the biggest
+                                buyers, with men spending slightly more than women.</p>
                         </div>
                         <div class="project-image">
                             <img src="shop.jpeg" alt="E-commerce Analysis">
@@ -163,9 +184,11 @@
                     <div class="project-content">
                         <div class="project-text">
                             <h3><a href="https://github.com/120810121996/Human-action-recognition" target="_blank">
-                                <i class="fas fa-running"></i> Human Action Recognition
-                            </a></h3>
-                            <p>Developed a model for recognizing human actions in videos by comparing 3D CNN and MobileNetV2 with LSTM architectures. The transfer learning approach achieved 95% accuracy, significantly outperforming the 3D CNN model (72%).</p>
+                                    <i class="fas fa-running"></i> Human Action Recognition
+                                </a></h3>
+                            <p>Developed a model for recognizing human actions in videos by comparing 3D CNN and
+                                MobileNetV2 with LSTM architectures. The transfer learning approach achieved 95%
+                                accuracy, significantly outperforming the 3D CNN model (72%).</p>
                             <p><strong>Technologies:</strong> Deep Learning, Computer Vision, Transfer Learning</p>
                         </div>
                         <div class="project-image">
@@ -178,10 +201,13 @@
                     <div class="project-content">
                         <div class="project-text">
                             <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank">
-                                <i class="fas fa-seedling"></i> Climate Change Impact on Agriculture
-                            </a></h3>
-                            <p>Analysis of 10,000 data points revealing crop yield impacts from CO₂ levels and extreme weather events. Random Forest model predicts 20% yield decline risk by 2030 in vulnerable regions.</p>
-                            <p><strong>Recommendations:</strong> Crop adaptation, optimized irrigation, and CO₂ reduction strategies.</p>
+                                    <i class="fas fa-seedling"></i> Climate Change Impact on Agriculture
+                                </a></h3>
+                            <p>Analysis of 10,000 data points revealing crop yield impacts from CO₂ levels and extreme
+                                weather events. Random Forest model predicts 20% yield decline risk by 2030 in
+                                vulnerable regions.</p>
+                            <p><strong>Recommendations:</strong> Crop adaptation, optimized irrigation, and CO₂
+                                reduction strategies.</p>
                         </div>
                         <div class="project-image">
                             <img src="crop.jpeg" alt="Agriculture Analysis">
@@ -193,10 +219,13 @@
                     <div class="project-content">
                         <div class="project-text">
                             <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank">
-                                <i class="fas fa-leaf"></i> Tomato Leaf Disease Detection
-                            </a></h3>
-                            <p>Automated system for detecting and classifying tomato leaf diseases using YOLOv8 model. Achieved 92% accuracy in identifying 10 distinct disease categories, enabling rapid diagnosis and targeted treatment for farmers.</p>
-                            <p><strong>Impact:</strong> Supports sustainable agricultural practices and minimizes crop losses.</p>
+                                    <i class="fas fa-leaf"></i> Tomato Leaf Disease Detection
+                                </a></h3>
+                            <p>Automated system for detecting and classifying tomato leaf diseases using YOLOv8 model.
+                                Achieved 92% accuracy in identifying 10 distinct disease categories, enabling rapid
+                                diagnosis and targeted treatment for farmers.</p>
+                            <p><strong>Impact:</strong> Supports sustainable agricultural practices and minimizes crop
+                                losses.</p>
                         </div>
                         <div class="project-image">
                             <img src="tomato.jpeg" alt="Disease Detection">
@@ -218,15 +247,16 @@
                         <a href="mailto:kochiake.kanne@aims-cameroon.org">kochiake.kanne@aims-cameroon.org</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
                     <div>
                         <strong>LinkedIn</strong><br>
-                        <a href="https://www.linkedin.com/in/kochiake-kanne-tamibe-5a42882b7/" target="_blank">Kanne Tamibe Kochiake</a>
+                        <a href="https://www.linkedin.com/in/kochiake-kanne-tamibe-5a42882b7/" target="_blank">Kanne
+                            Tamibe Kochiake</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
                     <div>
@@ -234,15 +264,15 @@
                         <a href="https://github.com/kanne-tamibe-kochiake" target="_blank">Kanne Tamibe Kochiake</a>
                     </div>
                 </div>
-                
-                <div class="contact-item">
+
+                <!-- <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <strong>Location</strong><br>
                         Limbe, Cameroon
                     </div>
-                </div>
-                
+                </div> -->
+
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
                     <div>
@@ -267,7 +297,7 @@
             document.body.classList.toggle('light-mode');
             const isLightMode = document.body.classList.contains('light-mode');
             localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-            
+
             // Animation smooth
             document.documentElement.style.transition = 'all 0.3s ease';
             setTimeout(() => {
@@ -276,7 +306,7 @@
         }
 
         // Charger le thème sauvegardé
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'light') {
                 document.body.classList.add('light-mode');
@@ -317,4 +347,5 @@
         });
     </script>
 </body>
+
 </html>
