@@ -338,9 +338,13 @@ section {
 }
 
 .project-content p {
-    line-height: 1.7;
+    line-height: 1.75;
+    font-size: 0.95rem;
     color: var(--text-light);
     opacity: 0.9;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 0.6rem;
 }
 
 .light-mode .project-content p {
