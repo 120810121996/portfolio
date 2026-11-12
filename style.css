@@ -683,3 +683,77 @@ html {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* =============================================
+   MULTI-PROFILE ADDITIONS
+   ============================================= */
+
+/* Import Outfit font for profile pages */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Logo row: back arrow + text side by side */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Back to home button */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+.back-btn:hover {
+    transform: translateX(-3px);
+}
+
+/* Profile badge chip next to subtitle */
+.profile-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    letter-spacing: 0.3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* Section title accent underline — overridden per profile via inline CSS var */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    border-radius: 999px;
+}
+
+/* About section download button */
+.about-text .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.about-text .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}

@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANNE TAMIBE KOCHIAKE - Data Analyst</title>
+    <meta name="description" content="Portfolio Data Analyst de Kanne Tamibe Kochiake - SQL, Power BI, statistiques, visualisation de donnees.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --accent: #06d6a0; --accent-light: #34d399; --accent-glow: rgba(6,214,160,0.2);
+            --accent-btn: linear-gradient(135deg, #06d6a0, #34d399);
+        }
+        .profile-badge { background: rgba(6,214,160,0.12); border: 1px solid rgba(6,214,160,0.3); color: #34d399; }
+        .back-btn { color: #34d399; }
+        .back-btn:hover { background: rgba(6,214,160,0.1); }
+        .btn { background: var(--accent-btn); }
+        .btn-outline { border-color: #06d6a0; color: #34d399; }
+        .btn-outline:hover { background: rgba(6,214,160,0.1); }
+        .section-title::after { background: linear-gradient(90deg, #06d6a0, #34d399); }
+        .skill-category { border-top: 3px solid #06d6a0; }
+        .skill-category h3 i { color: #34d399; }
+        .project-card { border-left: 4px solid #06d6a0; }
+        .certificate-card { border-left: 4px solid #06d6a0; }
+        .certificate-icon i { color: #34d399; }
+        .availability { color: #34d399; }
+        header { border-bottom: 1px solid rgba(6,214,160,0.15); }
+        nav a:hover, nav a.active { color: #34d399; }
+        .about-text p { text-align: justify; text-justify: inter-word; }
+        nav a { font-size: 1.1rem; }
+        .theme-toggle { font-size: 1rem; }
+        @media (max-width: 768px) { nav a { font-size: 1rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="back-btn" id="back-to-home" title="Choose profile">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <div>
+                        <h1>KANNE TAMIBE KOCHIAKE</h1>
+                        <p class="petit">Data Analyst <span class="profile-badge">Data Analyst Profile</span></p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#certificates">Certifications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-palette"></i> Theme</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="profile-image"><img src="tami.jpeg" alt="Kanne Tamibe Kochiake"></div>
+                <div class="about-text">
+                    <p>I'm <strong>KANNE TAMIBE KOCHIAKE</strong>, a Data Analyst with a strong foundation in <strong>statistics, data visualization and business intelligence</strong>. I help organizations understand their data, identify trends and make evidence-based decisions through clear, actionable insights.</p>
+                    <p style="margin-top:1rem;">My work covers the full analytical pipeline: from <strong>data collection and cleaning</strong> to <strong>exploratory analysis, hypothesis testing and dashboard creation</strong>. I work with SQL, Python (Pandas, NumPy), R, and Power BI to transform raw data into compelling narratives that drive strategy.</p>
+                    <p style="margin-top:1rem;">I hold the <strong>Google Data Analytics Professional Certificate</strong> (Coursera, 2026) and an MSc in Mathematical Sciences from AIMS Cameroon, giving me a solid grounding in both applied statistics and analytical best practices. I am available for longer-term projects and part-time commitments, remotely or full-time.</p>
+                    <div style="margin-top:1.5rem;">
+                        <a href="Curriculum-Vitae_Kanne_Tamibe_Kochiake.pdf" class="btn" target="_blank" download>
+                            <i class="fas fa-download"></i> Download CV (Data Analyst)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills fade-in">
+        <div class="container">
+            <h2 class="section-title">Professional Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Data Analysis &amp; Visualization</h3>
+                    <ul>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Data Visualization (Scatter plots, Bar charts, Pie charts, Heatmaps)</li>
+                        <li>Dashboard Creation with Power BI and Plotly</li>
+                        <li>Storytelling with Data &amp; Executive Reporting</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-calculator"></i> Statistics &amp; Analytics</h3>
+                    <ul>
+                        <li>Hypothesis Testing (t-test, Z-test, Chi-square, ANOVA)</li>
+                        <li>Descriptive &amp; Inferential Statistical Analysis</li>
+                        <li>Correlation Analysis &amp; Regression Modeling</li>
+                        <li>Time Series Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Data Management &amp; SQL</h3>
+                    <ul>
+                        <li>SQL Querying, Joins, Aggregations &amp; Window Functions</li>
+                        <li>Data Cleaning and Transformation</li>
+                        <li>Automated Web Scraping &amp; Data Extraction</li>
+                        <li>Anomaly Detection &amp; Pattern Recognition</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Data Preprocessing</h3>
+                    <ul>
+                        <li>Missing Value Imputation &amp; Outlier Treatment</li>
+                        <li>Feature Engineering and Construction</li>
+                        <li>Dimensionality Reduction (PCA, Factor Analysis)</li>
+                        <li>Data Quality Assessment &amp; Validation</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Technical Stack</h3>
+                    <ul>
+                        <li><strong>Languages:</strong> Python, R, SQL</li>
+                        <li><strong>Data:</strong> Pandas, NumPy, Matplotlib, Seaborn, ggplot2</li>
+                        <li><strong>BI &amp; Visualization:</strong> Power BI, Tableau, Plotly, Dash</li>
+                        <li><strong>Spreadsheets:</strong> Excel (advanced), Google Sheets</li>
+                        <li><strong>Tools:</strong> Git, Jupyter Notebook, RStudio</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> Business &amp; Analytical Skills</h3>
+                    <ul>
+                        <li>Customer Segmentation &amp; Behavioral Analysis</li>
+                        <li>Credit Risk &amp; Financial Data Analysis</li>
+                        <li>Report Writing &amp; Insight Communication</li>
+                        <li>Agricultural &amp; Environmental Data Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects fade-in">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h3><a href="https://github.com/120810121996/Project_1-E-commerce-Customer-Behavior-Analysis" target="_blank"><i class="fas fa-shopping-cart"></i> E-commerce Customer Behavior Analysis</a></h3>
+                            <p>Comprehensive analysis of e-commerce customer behavior using a dataset of <strong>350 customers with 11 variables</strong>. Conducted exploratory data analysis, customer segmentation and linear regression to identify key drivers of spending. Visualized behavioral patterns across demographics and geographies.</p>
+                            <p><strong>Key Findings:</strong> Gold customers and San Francisco residents are the biggest buyers, with men spending slightly more than women. Generated targeted marketing recommendations for each segment.</p>
+                            <p><strong>Stack:</strong> Python &middot; Pandas &middot; Matplotlib &middot; Seaborn &middot; Linear Regression</p>
+                        </div>
+                        <div class="project-image"><img src="shop.jpeg" alt="E-commerce Analysis"></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank"><i class="fas fa-seedling"></i> Climate Change Impact on Agriculture</a></h3>
+                            <p>Statistical analysis of <strong>10,000 data points</strong> revealing crop yield impacts from CO2 levels, temperature variations and extreme weather events. Applied regression modeling, hypothesis testing and time series visualization to quantify environmental risks. The Random Forest model predicts a <strong>20% yield decline risk by 2030</strong> in vulnerable regions.</p>
+                            <p><strong>Deliverables:</strong> Policy recommendations on crop adaptation, optimized irrigation strategies and CO2 reduction priorities.</p>
+                            <p><strong>Stack:</strong> Python &middot; Pandas &middot; Matplotlib &middot; Seaborn &middot; Scikit-learn &middot; Statistical Tests</p>
+                        </div>
+                        <div class="project-image"><img src="crop.jpeg" alt="Agriculture Analysis"></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h3><a href="https://github.com/120810121996/tender-scraper-job" target="_blank"><i class="fas fa-search-dollar"></i> Automated IT Tenders &amp; Job Crawler</a></h3>
+                            <p>An intelligent data aggregation and monitoring engine that collects, filters and structures IT opportunity data from multiple international and regional organizations. Features an advanced rule-based matching engine with geographic targeting, delivering structured daily reports via automated email pipelines.</p>
+                            <p><strong>Stack:</strong> Python &middot; Playwright &middot; BeautifulSoup &middot; curl-cffi &middot; Feedparser &middot; SMTP &middot; Regex</p>
+                        </div>
+                        <div class="project-image"><img src="scraper_crawler.png" alt="Automated IT Tenders and Job Crawler"></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h3><a href="https://github.com/120810121996/merchandising_app" target="_blank"><i class="fas fa-store"></i> Shelf Audit Analytics Dashboard</a></h3>
+                            <p>As part of the larger Intelligent Shelf Audit System for UCB, contributed to the <strong>analytics and reporting layer</strong>: designing dashboards and KPIs to track product placement compliance, shelf availability, and pricing accuracy across multiple field agents in real time.</p>
+                            <p><strong>Stack:</strong> Python &middot; React &middot; Plotly.js &middot; Firebase &middot; FastAPI</p>
+                        </div>
+                        <div class="project-image"><img src="shelfsense_ucb.png" alt="Shelf Audit Analytics Dashboard"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates fade-in">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card" style="border-left-width: 6px;">
+                    <div class="certificate-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="certificate-info">
+                        <h3>Google Data Analytics Professional Certificate <span style="font-size:0.75rem; background:rgba(6,214,160,0.15); color:#34d399; padding:0.2rem 0.6rem; border-radius:999px; font-weight:600; margin-left:0.5rem;">Featured</span></h3>
+                        <p class="issuer">Google (via Coursera)</p>
+                        <p class="date">Issued June 2026</p>
+                        <p class="desc">A 9-course professional program covering the complete data analytics workflow: data collection, cleaning, preprocessing, SQL querying, R programming, and visualization using Tableau and spreadsheets. Includes capstone project with real-world business case analysis.</p>
+                        <div class="certificate-links">
+                            <a href="https://github.com/120810121996/Certificate" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
+                            <a href="https://coursera.org/verify/professional-cert/1BM54FWSFY28" class="btn btn-outline" target="_blank"><i class="fas fa-external-link-alt"></i> Verify Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div><strong>Email</strong><br><a href="mailto:kochiake.kanne@aims-cameroon.org">kochiake.kanne@aims-cameroon.org</a></div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/kochiake-kanne-tamibe-5a42882b7/" target="_blank">Kanne Tamibe Kochiake</a></div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div><strong>GitHub</strong><br><a href="https://github.com/120810121996" target="_blank">120810121996</a></div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <div><strong>Availability</strong><br><span class="availability">Remote / Full-time</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 KANNE TAMIBE KOCHIAKE - Data Analyst</p>
+            <p>Transforming data into actionable intelligence</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const isLightMode = document.body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+            document.documentElement.style.transition = 'all 0.3s ease';
+            setTimeout(() => { document.documentElement.style.transition = ''; }, 300);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') document.body.classList.add('light-mode');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('loaded'); });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
