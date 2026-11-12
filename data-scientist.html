@@ -1,39 +1,234 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KANNE TAMIBE KOCHIAKE - Data Scientist</title>
-    <meta name="description" content="Portfolio Data Scientist de Kanne Tamibe Kochiake - Machine Learning, Deep Learning, Computer Vision, NLP.">
+    <meta name="description"
+        content="Portfolio Data Scientist de Kanne Tamibe Kochiake - Machine Learning, Deep Learning, Computer Vision, NLP.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            --accent: #7c6fff; --accent-light: #a78bfa; --accent-glow: rgba(124,111,255,0.2);
+            --accent: #7c6fff;
+            --accent-light: #a78bfa;
+            --accent-glow: rgba(124, 111, 255, 0.2);
             --accent-btn: linear-gradient(135deg, #7c6fff, #a78bfa);
         }
-        .profile-badge { background: rgba(124,111,255,0.12); border: 1px solid rgba(124,111,255,0.3); color: #a78bfa; }
-        .back-btn { color: #a78bfa; }
-        .back-btn:hover { background: rgba(124,111,255,0.1); }
-        .btn { background: var(--accent-btn); }
-        .btn-outline { border-color: #7c6fff; color: #a78bfa; }
-        .btn-outline:hover { background: rgba(124,111,255,0.1); }
-        .section-title::after { background: linear-gradient(90deg, #7c6fff, #a78bfa); }
-        .skill-category { border-top: 3px solid #7c6fff; }
-        .skill-category h3 i { color: #a78bfa; }
-        .project-card { border-left: 4px solid #7c6fff; }
-        .certificate-card { border-left: 4px solid #7c6fff; }
-        .certificate-icon i { color: #a78bfa; }
-        .availability { color: #a78bfa; }
-        header { border-bottom: 1px solid rgba(124,111,255,0.15); }
-        nav a:hover, nav a.active { color: #a78bfa; }
-        .about-text p { text-align: justify; text-justify: inter-word; }
-        nav a { font-size: 1.1rem; }
-        .theme-toggle { font-size: 1rem; }
-        @media (max-width: 768px) { nav a { font-size: 1rem; } }
+
+        .profile-badge {
+            background: rgba(124, 111, 255, 0.12);
+            border: 1px solid rgba(124, 111, 255, 0.3);
+            color: #a78bfa;
+        }
+
+        .back-btn {
+            color: #a78bfa;
+        }
+
+        .back-btn:hover {
+            background: rgba(124, 111, 255, 0.1);
+        }
+
+        .btn {
+            background: var(--accent-btn);
+        }
+
+        .btn-outline {
+            border-color: #7c6fff;
+            color: #a78bfa;
+        }
+
+        .btn-outline:hover {
+            background: rgba(124, 111, 255, 0.1);
+        }
+
+        .section-title::after {
+            background: linear-gradient(90deg, #7c6fff, #a78bfa);
+        }
+
+        .skill-category {
+            border-top: 3px solid #7c6fff;
+        }
+
+        .skill-category h3 i {
+            color: #a78bfa;
+        }
+
+        .project-card {
+            border-left: 4px solid #7c6fff;
+        }
+
+        .certificate-card {
+            border-left: 4px solid #7c6fff;
+        }
+
+        .certificate-icon i {
+            color: #a78bfa;
+        }
+
+        .availability {
+            color: #a78bfa;
+        }
+
+        header {
+            border-bottom: 1px solid rgba(124, 111, 255, 0.15);
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #a78bfa;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #7c6fff, #a78bfa, transparent);
+            border-radius: 999px;
+        }
+
+        .exp-card {
+            position: relative;
+            margin-bottom: 2.5rem;
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .exp-card:hover {
+            transform: translateX(6px);
+            box-shadow: 0 8px 30px rgba(124, 111, 255, 0.15);
+        }
+
+        .exp-card::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 1.8rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #7c6fff;
+            border: 3px solid #0f172a;
+            box-shadow: 0 0 0 3px rgba(124, 111, 255, 0.3);
+        }
+
+        .light-mode .exp-card {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .exp-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #a78bfa;
+        }
+
+        .exp-period {
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(124, 111, 255, 0.12);
+            color: #a78bfa;
+            border: 1px solid rgba(124, 111, 255, 0.25);
+            white-space: nowrap;
+        }
+
+        .exp-company {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e8eaf6;
+            margin-bottom: 1rem;
+        }
+
+        .light-mode .exp-company {
+            color: #1e293b;
+        }
+
+        .exp-company i {
+            margin-right: 0.4rem;
+            color: #a78bfa;
+            font-size: 0.85rem;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .exp-bullets li {
+            font-size: 0.93rem;
+            line-height: 1.65;
+            color: rgba(232, 234, 246, 0.85);
+            padding-left: 1.4rem;
+            position: relative;
+            text-align: justify;
+        }
+
+        .light-mode .exp-bullets li {
+            color: rgba(30, 41, 59, 0.85);
+        }
+
+        .exp-bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #7c6fff;
+            font-size: 0.85rem;
+            top: 0.05rem;
+        }
+
+        .about-text p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        nav a {
+            font-size: 1.1rem;
+        }
+
+        .theme-toggle {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -51,10 +246,12 @@
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#certificates">Certifications</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-palette"></i> Theme</button></li>
+                        <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-palette"></i>
+                                Theme</button></li>
                     </ul>
                 </nav>
             </div>
@@ -67,11 +264,20 @@
             <div class="about-content">
                 <div class="profile-image"><img src="tami.jpeg" alt="Kanne Tamibe Kochiake"></div>
                 <div class="about-text">
-                    <p>I'm <strong>KANNE TAMIBE KOCHIAKE</strong>, a Data Scientist with a passion for building intelligent systems that turn raw data into real-world impact. I specialize in <strong>machine learning, deep learning and computer vision</strong>, designing end-to-end AI pipelines from data collection and preprocessing to model deployment.</p>
-                    <p style="margin-top:1rem;">My expertise spans <strong>supervised and unsupervised learning</strong>, neural network architectures (CNN, ResNet, YOLO), natural language processing and transfer learning. I have delivered projects in computer vision for industry (shelf auditing, disease detection, action recognition), credit risk modeling and agricultural AI — always focusing on measurable, production-ready outcomes.</p>
-                    <p style="margin-top:1rem;">I hold an <strong>MSc in Mathematical Sciences (AIMS Cameroon)</strong> and am available for longer-term projects and part-time commitments, remotely or full-time.</p>
+                    <p>I'm <strong>KANNE TAMIBE KOCHIAKE</strong>, a Data Scientist with a passion for building
+                        intelligent systems that turn raw data into real-world impact. I specialize in <strong>machine
+                            learning, deep learning and computer vision</strong>, designing end-to-end AI pipelines from
+                        data collection and preprocessing to model deployment.</p>
+                    <p style="margin-top:1rem;">My expertise spans <strong>supervised and unsupervised
+                            learning</strong>, neural network architectures (CNN, ResNet, YOLO), natural language
+                        processing and transfer learning. I have delivered projects in computer vision for industry
+                        (shelf auditing, disease detection, action recognition), credit risk modeling and agricultural
+                        AI — always focusing on measurable, production-ready outcomes.</p>
+                    <p style="margin-top:1rem;">I hold an <strong>MSc in Mathematical Sciences (AIMS Cameroon)</strong>
+                        and am available for longer-term projects and part-time commitments, remotely or full-time.</p>
                     <div style="margin-top:1.5rem;">
-                        <a href="CV-Data_Scientist-Kanne-Tamibe-Kochiake-IndabaX.pdf" class="btn" target="_blank" download>
+                        <a href="CV-Data_Scientist-Kanne-Tamibe-Kochiake-IndabaX.pdf" class="btn" target="_blank"
+                            download>
                             <i class="fas fa-download"></i> Download CV (Data Scientist)
                         </a>
                     </div>
@@ -144,6 +350,100 @@
         </div>
     </section>
 
+    <section id="experience" class="fade-in" style="padding: 5rem 0; margin-bottom: 2rem;">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+
+                <!-- SODECOTON -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Analyst</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> May 2026 – Aug 2026</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-industry"></i> SODECOTON &mdash; Garoua, Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Extracted and verified consistency of budgetary data across multiple departments (MySQL,
+                            Excel), identifying discrepancies to improve reliability of internal financial reporting.
+                        </li>
+                        <li>Contributed to data migration from the legacy system to a new ERP, ensuring integrity and
+                            consistency of historical records throughout the transition.</li>
+                    </ul>
+                </div>
+
+                <!-- Kaeyros Analytics -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Scientist Intern</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> Jul. 2025 – Apr. 2026</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-chart-line"></i> Kaeyros Analytics &mdash; Yaound&eacute;,
+                        Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Designed and deployed a computer vision shelf-audit solution (YOLOv11, PaddleOCR),
+                            integrated with a FastAPI backend, PostgreSQL database, Flutter mobile app, and a real-time
+                            compliance dashboard tracking price conformity, product presence and auditor activity.</li>
+                        <li>Preprocessed and analyzed distribution network data for 5,389 sales points in Yaound&eacute;
+                            and Douala: interactive neighbourhood mapping and commercial opportunity zone identification
+                            (R).</li>
+                        <li>Architected the data storage layer (PostgreSQL) and associated API access flows (FastAPI),
+                            maintaining data integrity at every processing step.</li>
+                        <li>Defined KPIs and built operational dashboards for UCB (House of Favour), Bavaria and Premium
+                            Food promotions, used for real-time commercial performance monitoring (React).</li>
+                    </ul>
+                </div>
+
+                <!-- Maroua Innovation Technology -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Scientist Intern</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> Jan. 2024 – Jun. 2024</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-lightbulb"></i> Maroua Innovation Technology &mdash;
+                        Maroua, Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Designed and deployed a plant disease detection model within a mobile application, and
+                            developed the API service enabling the app to call the model in real time.</li>
+                        <li>Built an AI chatbot for an e-commerce app, allowing users to browse available products,
+                            check specifications, and place orders directly within the conversation.</li>
+                        <li>Implemented a vision-language model (Qwen VLM) to read and analyze birth certificates,
+                            digitizing paper civil-registry records into searchable, structured data.</li>
+                    </ul>
+                </div>
+
+                <!-- Credit du Sahel -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Scientist Intern</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> Feb. 2023 – Jun. 2023</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-university"></i> Cr&eacute;dit Du Sahel &mdash; Maroua,
+                        Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Statistically analyzed 8,786 credit files (2010–2023, 20 branches): correlation and
+                            independence testing, robust normalization of extreme values to identify key lending
+                            decision drivers.</li>
+                        <li>Built a credit scoring model for loan approval decision support, and a client portfolio
+                            monitoring dashboard providing clear, up-to-date risk and performance indicators.</li>
+                    </ul>
+                </div>
+
+                <!-- SODECOTON 2021 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Analyst Intern</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> Jul. 2021 – Aug. 2021</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-industry"></i> SODECOTON &mdash; Garoua, Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Implemented an automated data backup system, reducing the risk of information loss.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="projects" class="projects fade-in">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
@@ -151,29 +451,53 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/merchandising_app" target="_blank"><i class="fas fa-store"></i> Intelligent Shelf Audit System</a></h3>
-                            <p>Shelf audits at UCB were done manually, a slow, costly process with up to <strong>30% error rate</strong> and reports taking <strong>2-3 days</strong> to reach managers. We built an end-to-end AI platform for <strong>UCB (Union Camerounaise de Brasseries)</strong> that lets field agents photograph shelves and instantly detect products and prices via computer vision. Reports are now transmitted in <strong>seconds</strong>, errors are drastically reduced, and our YOLOv11s model achieved <strong>94% mAP</strong> on test data.</p>
-                            <p><strong>Stack:</strong> Python &middot; FastAPI &middot; YOLOv11s &middot; PaddleOCR &middot; Flutter &middot; Firebase &middot; React &middot; Plotly.js</p>
+                            <h3><a href="https://github.com/120810121996/merchandising_app" target="_blank"><i
+                                        class="fas fa-store"></i> Intelligent Shelf Audit System</a></h3>
+                            <p>Shelf audits at UCB were done manually, a slow, costly process with up to <strong>30%
+                                    error rate</strong> and reports taking <strong>2-3 days</strong> to reach managers.
+                                We built an end-to-end AI platform for <strong>UCB (Union Camerounaise de
+                                    Brasseries)</strong> that lets field agents photograph shelves and instantly detect
+                                products and prices via computer vision. Reports are now transmitted in
+                                <strong>seconds</strong>, errors are drastically reduced, and our YOLOv11s model
+                                achieved <strong>94% mAP</strong> on test data.
+                            </p>
+                            <p><strong>Stack:</strong> Python &middot; FastAPI &middot; YOLOv11s &middot; PaddleOCR
+                                &middot; Flutter &middot; Firebase &middot; React &middot; Plotly.js</p>
                         </div>
-                        <div class="project-image"><img src="shelfsense_ucb.png" alt="ShelfSense UCB - Shelf Audit AI System"></div>
+                        <div class="project-image"><img src="shelfsense_ucb.png"
+                                alt="ShelfSense UCB - Shelf Audit AI System"></div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/Multi-Category-Quality-Assessment-of-Safou-using-CNNs" target="_blank"><i class="fas fa-brain"></i> Multi-Category Quality Assessment of Safou using CNNs</a></h3>
-                            <p>Developed and evaluated state-of-the-art Deep Learning models (ResNet-50, ReXNet-150, DenseNet-121) for the multi-class quality classification of African Plums (Dacryodes edulis / Safou) to automate post-harvest sorting and reduce food waste. Trained on a dataset of 4,507 annotated images across six quality states. Handled class imbalance using WeightedRandomSampler and achieved a top accuracy of <strong>91.07%</strong> with ResNet-50.</p>
-                            <p><strong>Stack:</strong> Python &middot; PyTorch &middot; ResNet &middot; ReXNet &middot; DenseNet &middot; Transfer Learning</p>
+                            <h3><a href="https://github.com/120810121996/Multi-Category-Quality-Assessment-of-Safou-using-CNNs"
+                                    target="_blank"><i class="fas fa-brain"></i> Multi-Category Quality Assessment of
+                                    Safou using CNNs</a></h3>
+                            <p>Developed and evaluated state-of-the-art Deep Learning models (ResNet-50, ReXNet-150,
+                                DenseNet-121) for the multi-class quality classification of African Plums (Dacryodes
+                                edulis / Safou) to automate post-harvest sorting and reduce food waste. Trained on a
+                                dataset of 4,507 annotated images across six quality states. Handled class imbalance
+                                using WeightedRandomSampler and achieved a top accuracy of <strong>91.07%</strong> with
+                                ResNet-50.</p>
+                            <p><strong>Stack:</strong> Python &middot; PyTorch &middot; ResNet &middot; ReXNet &middot;
+                                DenseNet &middot; Transfer Learning</p>
                         </div>
-                        <div class="project-image"><img src="prediction_results_large_text_7.png" alt="Multi-Category Quality Assessment of Safou"></div>
+                        <div class="project-image"><img src="prediction_results_large_text_7.png"
+                                alt="Multi-Category Quality Assessment of Safou"></div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/Human-action-recognition" target="_blank"><i class="fas fa-running"></i> Human Action Recognition</a></h3>
-                            <p>Developed a model for recognizing human actions in videos by comparing 3D CNN and MobileNetV2 with LSTM architectures. The transfer learning approach achieved <strong>95% accuracy</strong>, significantly outperforming the 3D CNN model (72%). Demonstrates the power of temporal modeling combined with pre-trained visual features.</p>
-                            <p><strong>Technologies:</strong> Deep Learning, Computer Vision, Transfer Learning, MobileNetV2, LSTM</p>
+                            <h3><a href="https://github.com/120810121996/Human-action-recognition" target="_blank"><i
+                                        class="fas fa-running"></i> Human Action Recognition</a></h3>
+                            <p>Developed a model for recognizing human actions in videos by comparing 3D CNN and
+                                MobileNetV2 with LSTM architectures. The transfer learning approach achieved <strong>95%
+                                    accuracy</strong>, significantly outperforming the 3D CNN model (72%). Demonstrates
+                                the power of temporal modeling combined with pre-trained visual features.</p>
+                            <p><strong>Technologies:</strong> Deep Learning, Computer Vision, Transfer Learning,
+                                MobileNetV2, LSTM</p>
                         </div>
                         <div class="project-image"><img src="recon.jpg" alt="Action Recognition"></div>
                     </div>
@@ -181,9 +505,13 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank"><i class="fas fa-leaf"></i> Tomato Leaf Disease Detection</a></h3>
-                            <p>Automated system for detecting and classifying tomato leaf diseases using YOLOv8 model. Achieved <strong>92% accuracy</strong> in identifying 10 distinct disease categories, enabling rapid diagnosis and targeted treatment for farmers.</p>
-                            <p><strong>Impact:</strong> Supports sustainable agricultural practices and minimizes crop losses.</p>
+                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank"><i
+                                        class="fas fa-leaf"></i> Tomato Leaf Disease Detection</a></h3>
+                            <p>Automated system for detecting and classifying tomato leaf diseases using YOLOv8 model.
+                                Achieved <strong>92% accuracy</strong> in identifying 10 distinct disease categories,
+                                enabling rapid diagnosis and targeted treatment for farmers.</p>
+                            <p><strong>Impact:</strong> Supports sustainable agricultural practices and minimizes crop
+                                losses.</p>
                         </div>
                         <div class="project-image"><img src="tomato.jpeg" alt="Disease Detection"></div>
                     </div>
@@ -191,19 +519,30 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/tender-scraper-job" target="_blank"><i class="fas fa-search-dollar"></i> Automated IT Tenders &amp; Job Crawler</a></h3>
-                            <p>An intelligent backend automation engine that scrapes, filters, and alerts on IT opportunities from multiple international and regional organizations. Built with specialized scraping pipelines (Playwright, BeautifulSoup, curl-cffi, APIs) and an advanced rule-based matching engine.</p>
-                            <p><strong>Stack:</strong> Python &middot; Playwright &middot; BeautifulSoup &middot; curl-cffi &middot; Feedparser &middot; SMTP &middot; Regex</p>
+                            <h3><a href="https://github.com/120810121996/tender-scraper-job" target="_blank"><i
+                                        class="fas fa-search-dollar"></i> Automated IT Tenders &amp; Job Crawler</a>
+                            </h3>
+                            <p>An intelligent backend automation engine that scrapes, filters, and alerts on IT
+                                opportunities from multiple international and regional organizations. Built with
+                                specialized scraping pipelines (Playwright, BeautifulSoup, curl-cffi, APIs) and an
+                                advanced rule-based matching engine.</p>
+                            <p><strong>Stack:</strong> Python &middot; Playwright &middot; BeautifulSoup &middot;
+                                curl-cffi &middot; Feedparser &middot; SMTP &middot; Regex</p>
                         </div>
-                        <div class="project-image"><img src="scraper_crawler.png" alt="Automated IT Tenders and Job Crawler"></div>
+                        <div class="project-image"><img src="scraper_crawler.png"
+                                alt="Automated IT Tenders and Job Crawler"></div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank"><i class="fas fa-seedling"></i> Climate Change Impact on Agriculture</a></h3>
-                            <p>Analysis of 10,000 data points revealing crop yield impacts from CO2 levels and extreme weather events. Random Forest model predicts <strong>20% yield decline risk by 2030</strong> in vulnerable regions.</p>
-                            <p><strong>Recommendations:</strong> Crop adaptation, optimized irrigation, and CO2 reduction strategies.</p>
+                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank"><i
+                                        class="fas fa-seedling"></i> Climate Change Impact on Agriculture</a></h3>
+                            <p>Analysis of 10,000 data points revealing crop yield impacts from CO2 levels and extreme
+                                weather events. Random Forest model predicts <strong>20% yield decline risk by
+                                    2030</strong> in vulnerable regions.</p>
+                            <p><strong>Recommendations:</strong> Crop adaptation, optimized irrigation, and CO2
+                                reduction strategies.</p>
                         </div>
                         <div class="project-image"><img src="crop.jpeg" alt="Agriculture Analysis"></div>
                     </div>
@@ -222,10 +561,13 @@
                         <h3>Google Data Analytics Professional Certificate</h3>
                         <p class="issuer">Google (via Coursera)</p>
                         <p class="date">Issued June 2026</p>
-                        <p class="desc">A 9-course professional program covering foundations of data science, data preprocessing, analysis, and visualization using SQL, Tableau, R, and spreadsheets.</p>
+                        <p class="desc">A 9-course professional program covering foundations of data science, data
+                            preprocessing, analysis, and visualization using SQL, Tableau, R, and spreadsheets.</p>
                         <div class="certificate-links">
-                            <a href="https://github.com/120810121996/Certificate" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
-                            <a href="https://coursera.org/verify/professional-cert/1BM54FWSFY28" class="btn btn-outline" target="_blank"><i class="fas fa-external-link-alt"></i> Verify Online</a>
+                            <a href="https://github.com/120810121996/Certificate" class="btn" target="_blank"><i
+                                    class="fas fa-file-pdf"></i> View Certificate</a>
+                            <a href="https://coursera.org/verify/professional-cert/1BM54FWSFY28" class="btn btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Verify Online</a>
                         </div>
                     </div>
                 </div>
@@ -239,15 +581,18 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <div><strong>Email</strong><br><a href="mailto:kochiake.kanne@aims-cameroon.org">kochiake.kanne@aims-cameroon.org</a></div>
+                    <div><strong>Email</strong><br><a href="mailto:kochiakeme@gmail.com">kochiakeme@gmail.com</a></div>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/kochiake-kanne-tamibe-5a42882b7/" target="_blank">Kanne Tamibe Kochiake</a></div>
+                    <div><strong>LinkedIn</strong><br><a
+                            href="https://www.linkedin.com/in/kochiake-kanne-tamibe-5a42882b7/" target="_blank">Kanne
+                            Tamibe Kochiake</a></div>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
-                    <div><strong>GitHub</strong><br><a href="https://github.com/120810121996" target="_blank">120810121996</a></div>
+                    <div><strong>GitHub</strong><br><a href="https://github.com/120810121996"
+                            target="_blank">120810121996</a></div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
@@ -289,4 +634,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -1,39 +1,235 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KANNE TAMIBE KOCHIAKE - Data Analyst</title>
-    <meta name="description" content="Portfolio Data Analyst de Kanne Tamibe Kochiake - SQL, Power BI, statistiques, visualisation de donnees.">
+    <meta name="description"
+        content="Portfolio Data Analyst de Kanne Tamibe Kochiake - SQL, Power BI, statistiques, visualisation de donnees.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            --accent: #06d6a0; --accent-light: #34d399; --accent-glow: rgba(6,214,160,0.2);
+            --accent: #06d6a0;
+            --accent-light: #34d399;
+            --accent-glow: rgba(6, 214, 160, 0.2);
             --accent-btn: linear-gradient(135deg, #06d6a0, #34d399);
         }
-        .profile-badge { background: rgba(6,214,160,0.12); border: 1px solid rgba(6,214,160,0.3); color: #34d399; }
-        .back-btn { color: #34d399; }
-        .back-btn:hover { background: rgba(6,214,160,0.1); }
-        .btn { background: var(--accent-btn); }
-        .btn-outline { border-color: #06d6a0; color: #34d399; }
-        .btn-outline:hover { background: rgba(6,214,160,0.1); }
-        .section-title::after { background: linear-gradient(90deg, #06d6a0, #34d399); }
-        .skill-category { border-top: 3px solid #06d6a0; }
-        .skill-category h3 i { color: #34d399; }
-        .project-card { border-left: 4px solid #06d6a0; }
-        .certificate-card { border-left: 4px solid #06d6a0; }
-        .certificate-icon i { color: #34d399; }
-        .availability { color: #34d399; }
-        header { border-bottom: 1px solid rgba(6,214,160,0.15); }
-        nav a:hover, nav a.active { color: #34d399; }
-        .about-text p { text-align: justify; text-justify: inter-word; }
-        nav a { font-size: 1.1rem; }
-        .theme-toggle { font-size: 1rem; }
-        @media (max-width: 768px) { nav a { font-size: 1rem; } }
+
+        .profile-badge {
+            background: rgba(6, 214, 160, 0.12);
+            border: 1px solid rgba(6, 214, 160, 0.3);
+            color: #34d399;
+        }
+
+        .back-btn {
+            color: #34d399;
+        }
+
+        .back-btn:hover {
+            background: rgba(6, 214, 160, 0.1);
+        }
+
+        .btn {
+            background: var(--accent-btn);
+        }
+
+        .btn-outline {
+            border-color: #06d6a0;
+            color: #34d399;
+        }
+
+        .btn-outline:hover {
+            background: rgba(6, 214, 160, 0.1);
+        }
+
+        .section-title::after {
+            background: linear-gradient(90deg, #06d6a0, #34d399);
+        }
+
+        .skill-category {
+            border-top: 3px solid #06d6a0;
+        }
+
+        .skill-category h3 i {
+            color: #34d399;
+        }
+
+        .project-card {
+            border-left: 4px solid #06d6a0;
+        }
+
+        .certificate-card {
+            border-left: 4px solid #06d6a0;
+        }
+
+        .certificate-icon i {
+            color: #34d399;
+        }
+
+        .availability {
+            color: #34d399;
+        }
+
+        header {
+            border-bottom: 1px solid rgba(6, 214, 160, 0.15);
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #34d399;
+        }
+
+        .about-text p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        nav a {
+            font-size: 1.1rem;
+        }
+
+        .theme-toggle {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1rem;
+            }
+        }
+
+        /* ---- Timeline ---- */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #06d6a0, #34d399, transparent);
+            border-radius: 999px;
+        }
+
+        .exp-card {
+            position: relative;
+            margin-bottom: 2.5rem;
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .exp-card:hover {
+            transform: translateX(6px);
+            box-shadow: 0 8px 30px rgba(6, 214, 160, 0.15);
+        }
+
+        .exp-card::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 1.8rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #06d6a0;
+            border: 3px solid #0f172a;
+            box-shadow: 0 0 0 3px rgba(6, 214, 160, 0.3);
+        }
+
+        .light-mode .exp-card {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .exp-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #34d399;
+        }
+
+        .exp-period {
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(6, 214, 160, 0.12);
+            color: #34d399;
+            border: 1px solid rgba(6, 214, 160, 0.25);
+            white-space: nowrap;
+        }
+
+        .exp-company {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e8eaf6;
+            margin-bottom: 1rem;
+        }
+
+        .light-mode .exp-company {
+            color: #1e293b;
+        }
+
+        .exp-company i {
+            margin-right: 0.4rem;
+            color: #34d399;
+            font-size: 0.85rem;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .exp-bullets li {
+            font-size: 0.93rem;
+            line-height: 1.65;
+            color: rgba(232, 234, 246, 0.85);
+            padding-left: 1.4rem;
+            position: relative;
+            text-align: justify;
+        }
+
+        .light-mode .exp-bullets li {
+            color: rgba(30, 41, 59, 0.85);
+        }
+
+        .exp-bullets li::before {
+            content: "\25b8";
+
+            position: absolute;
+            left: 0;
+            color: #06d6a0;
+            font-size: 0.85rem;
+            top: 0.05rem;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -51,10 +247,12 @@
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#certificates">Certifications</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-palette"></i> Theme</button></li>
+                        <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-palette"></i>
+                                Theme</button></li>
                     </ul>
                 </nav>
             </div>
@@ -67,9 +265,19 @@
             <div class="about-content">
                 <div class="profile-image"><img src="tami.jpeg" alt="Kanne Tamibe Kochiake"></div>
                 <div class="about-text">
-                    <p>I'm <strong>KANNE TAMIBE KOCHIAKE</strong>, a Data Analyst with a strong foundation in <strong>statistics, data visualization and business intelligence</strong>. I help organizations understand their data, identify trends and make evidence-based decisions through clear, actionable insights.</p>
-                    <p style="margin-top:1rem;">My work covers the full analytical pipeline: from <strong>data collection and cleaning</strong> to <strong>exploratory analysis, hypothesis testing and dashboard creation</strong>. I work with SQL, Python (Pandas, NumPy), R, and Power BI to transform raw data into compelling narratives that drive strategy.</p>
-                    <p style="margin-top:1rem;">I hold the <strong>Google Data Analytics Professional Certificate</strong> (Coursera, 2026) and an MSc in Mathematical Sciences from AIMS Cameroon, giving me a solid grounding in both applied statistics and analytical best practices. I am available for longer-term projects and part-time commitments, remotely or full-time.</p>
+                    <p>I'm <strong>KANNE TAMIBE KOCHIAKE</strong>, a Data Analyst with a strong foundation in
+                        <strong>statistics, data visualization and business intelligence</strong>. I help organizations
+                        understand their data, identify trends and make evidence-based decisions through clear,
+                        actionable insights.
+                    </p>
+                    <p style="margin-top:1rem;">My work covers the full analytical pipeline: from <strong>data
+                            collection and cleaning</strong> to <strong>exploratory analysis, hypothesis testing and
+                            dashboard creation</strong>. I work with SQL, Python (Pandas, NumPy), R, and Power BI to
+                        transform raw data into compelling narratives that drive strategy.</p>
+                    <p style="margin-top:1rem;">I hold the <strong>Google Data Analytics Professional
+                            Certificate</strong> (Coursera, 2026) and an MSc in Mathematical Sciences from AIMS
+                        Cameroon, giving me a solid grounding in both applied statistics and analytical best practices.
+                        I am available for longer-term projects and part-time commitments, remotely or full-time.</p>
                     <div style="margin-top:1.5rem;">
                         <a href="Curriculum-Vitae_Kanne_Tamibe_Kochiake.pdf" class="btn" target="_blank" download>
                             <i class="fas fa-download"></i> Download CV (Data Analyst)
@@ -143,6 +351,79 @@
         </div>
     </section>
 
+    <section id="experience" class="fade-in" style="padding: 5rem 0; margin-bottom: 2rem;">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Analyst</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> May 2026 &ndash; Aug 2026</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-industry"></i> SODECOTON &mdash; Garoua, Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Controlled consistency and extracted budgetary data across multiple departments (MySQL,
+                            Excel), identifying discrepancies to improve reliability of internal financial reporting.
+                        </li>
+                        <li>Contributed to data migration from the legacy system to a new ERP, ensuring integrity and
+                            consistency of historical records throughout the transition.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Scientist Intern &mdash; Analytics &amp; Reporting Focus</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> Jul. 2025 &ndash; Apr. 2026</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-chart-line"></i> Kaeyros Analytics &mdash; Yaound&eacute;,
+                        Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Preprocessed and analyzed distribution network data for 5,389 sales points in Yaound&eacute;
+                            and Douala: interactive neighbourhood mapping and commercial opportunity zone identification
+                            (R).</li>
+                        <li>Defined KPIs and built operational dashboards for UCB (House of Favour), Bavaria and Premium
+                            Food promotions, used for real-time commercial performance monitoring (React, Plotly.js).
+                        </li>
+                        <li>Architected the data storage layer (PostgreSQL) and associated API access flows (FastAPI),
+                            maintaining data integrity at every processing step.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Analyst Intern</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> Feb. 2023 &ndash; Jun. 2023</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-university"></i> Cr&eacute;dit Du Sahel &mdash; Maroua,
+                        Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Analyzed 8,786 credit files from 20 branches using statistical tests (Excel) to identify the
+                            variables that genuinely drive loan approval decisions.</li>
+                        <li>Built a credit scoring model (Python, R; Gradient Boosting vs. Random Forest) for loan
+                            approval decision support.</li>
+                        <li>Designed a client portfolio monitoring dashboard giving teams a clear, up-to-date view of
+                            risk and performance indicators.</li>
+                        <li>Contributed to the KYC platform implementation and client data updates, securing the rollout
+                            of mobile money and ATM services.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Data Analyst Intern</div>
+                        <div class="exp-period"><i class="fas fa-calendar-alt"></i> Jul. 2021 &ndash; Aug. 2021</div>
+                    </div>
+                    <div class="exp-company"><i class="fas fa-industry"></i> SODECOTON &mdash; Garoua, Cameroon</div>
+                    <ul class="exp-bullets">
+                        <li>Implemented an automated data backup system, reducing the risk of information loss.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="projects" class="projects fade-in">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
@@ -150,10 +431,18 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/Project_1-E-commerce-Customer-Behavior-Analysis" target="_blank"><i class="fas fa-shopping-cart"></i> E-commerce Customer Behavior Analysis</a></h3>
-                            <p>Comprehensive analysis of e-commerce customer behavior using a dataset of <strong>350 customers with 11 variables</strong>. Conducted exploratory data analysis, customer segmentation and linear regression to identify key drivers of spending. Visualized behavioral patterns across demographics and geographies.</p>
-                            <p><strong>Key Findings:</strong> Gold customers and San Francisco residents are the biggest buyers, with men spending slightly more than women. Generated targeted marketing recommendations for each segment.</p>
-                            <p><strong>Stack:</strong> Python &middot; Pandas &middot; Matplotlib &middot; Seaborn &middot; Linear Regression</p>
+                            <h3><a href="https://github.com/120810121996/Project_1-E-commerce-Customer-Behavior-Analysis"
+                                    target="_blank"><i class="fas fa-shopping-cart"></i> E-commerce Customer Behavior
+                                    Analysis</a></h3>
+                            <p>Comprehensive analysis of e-commerce customer behavior using a dataset of <strong>350
+                                    customers with 11 variables</strong>. Conducted exploratory data analysis, customer
+                                segmentation and linear regression to identify key drivers of spending. Visualized
+                                behavioral patterns across demographics and geographies.</p>
+                            <p><strong>Key Findings:</strong> Gold customers and San Francisco residents are the biggest
+                                buyers, with men spending slightly more than women. Generated targeted marketing
+                                recommendations for each segment.</p>
+                            <p><strong>Stack:</strong> Python &middot; Pandas &middot; Matplotlib &middot; Seaborn
+                                &middot; Linear Regression</p>
                         </div>
                         <div class="project-image"><img src="shop.jpeg" alt="E-commerce Analysis"></div>
                     </div>
@@ -161,10 +450,17 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank"><i class="fas fa-seedling"></i> Climate Change Impact on Agriculture</a></h3>
-                            <p>Statistical analysis of <strong>10,000 data points</strong> revealing crop yield impacts from CO2 levels, temperature variations and extreme weather events. Applied regression modeling, hypothesis testing and time series visualization to quantify environmental risks. The Random Forest model predicts a <strong>20% yield decline risk by 2030</strong> in vulnerable regions.</p>
-                            <p><strong>Deliverables:</strong> Policy recommendations on crop adaptation, optimized irrigation strategies and CO2 reduction priorities.</p>
-                            <p><strong>Stack:</strong> Python &middot; Pandas &middot; Matplotlib &middot; Seaborn &middot; Scikit-learn &middot; Statistical Tests</p>
+                            <h3><a href="https://github.com/120810121996/CRop-yield-Analysis" target="_blank"><i
+                                        class="fas fa-seedling"></i> Climate Change Impact on Agriculture</a></h3>
+                            <p>Statistical analysis of <strong>10,000 data points</strong> revealing crop yield impacts
+                                from CO2 levels, temperature variations and extreme weather events. Applied regression
+                                modeling, hypothesis testing and time series visualization to quantify environmental
+                                risks. The Random Forest model predicts a <strong>20% yield decline risk by
+                                    2030</strong> in vulnerable regions.</p>
+                            <p><strong>Deliverables:</strong> Policy recommendations on crop adaptation, optimized
+                                irrigation strategies and CO2 reduction priorities.</p>
+                            <p><strong>Stack:</strong> Python &middot; Pandas &middot; Matplotlib &middot; Seaborn
+                                &middot; Scikit-learn &middot; Statistical Tests</p>
                         </div>
                         <div class="project-image"><img src="crop.jpeg" alt="Agriculture Analysis"></div>
                     </div>
@@ -172,21 +468,35 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/tender-scraper-job" target="_blank"><i class="fas fa-search-dollar"></i> Automated IT Tenders &amp; Job Crawler</a></h3>
-                            <p>An intelligent data aggregation and monitoring engine that collects, filters and structures IT opportunity data from multiple international and regional organizations. Features an advanced rule-based matching engine with geographic targeting, delivering structured daily reports via automated email pipelines.</p>
-                            <p><strong>Stack:</strong> Python &middot; Playwright &middot; BeautifulSoup &middot; curl-cffi &middot; Feedparser &middot; SMTP &middot; Regex</p>
+                            <h3><a href="https://github.com/120810121996/tender-scraper-job" target="_blank"><i
+                                        class="fas fa-search-dollar"></i> Automated IT Tenders &amp; Job Crawler</a>
+                            </h3>
+                            <p>An intelligent data aggregation and monitoring engine that collects, filters and
+                                structures IT opportunity data from multiple international and regional organizations.
+                                Features an advanced rule-based matching engine with geographic targeting, delivering
+                                structured daily reports via automated email pipelines.</p>
+                            <p><strong>Stack:</strong> Python &middot; Playwright &middot; BeautifulSoup &middot;
+                                curl-cffi &middot; Feedparser &middot; SMTP &middot; Regex</p>
                         </div>
-                        <div class="project-image"><img src="scraper_crawler.png" alt="Automated IT Tenders and Job Crawler"></div>
+                        <div class="project-image"><img src="scraper_crawler.png"
+                                alt="Automated IT Tenders and Job Crawler"></div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-text">
-                            <h3><a href="https://github.com/120810121996/merchandising_app" target="_blank"><i class="fas fa-store"></i> Shelf Audit Analytics Dashboard</a></h3>
-                            <p>As part of the larger Intelligent Shelf Audit System for UCB, contributed to the <strong>analytics and reporting layer</strong>: designing dashboards and KPIs to track product placement compliance, shelf availability, and pricing accuracy across multiple field agents in real time.</p>
-                            <p><strong>Stack:</strong> Python &middot; React &middot; Plotly.js &middot; Firebase &middot; FastAPI</p>
+                            <h3><a href="https://github.com/120810121996/merchandising_app" target="_blank"><i
+                                        class="fas fa-store"></i> Shelf Audit Analytics Dashboard</a></h3>
+                            <p>As part of the larger Intelligent Shelf Audit System for UCB, contributed to the
+                                <strong>analytics and reporting layer</strong>: designing dashboards and KPIs to track
+                                product placement compliance, shelf availability, and pricing accuracy across multiple
+                                field agents in real time.
+                            </p>
+                            <p><strong>Stack:</strong> Python &middot; React &middot; Plotly.js &middot; Firebase
+                                &middot; FastAPI</p>
                         </div>
-                        <div class="project-image"><img src="shelfsense_ucb.png" alt="Shelf Audit Analytics Dashboard"></div>
+                        <div class="project-image"><img src="shelfsense_ucb.png" alt="Shelf Audit Analytics Dashboard">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -200,13 +510,20 @@
                 <div class="certificate-card" style="border-left-width: 6px;">
                     <div class="certificate-icon"><i class="fas fa-certificate"></i></div>
                     <div class="certificate-info">
-                        <h3>Google Data Analytics Professional Certificate <span style="font-size:0.75rem; background:rgba(6,214,160,0.15); color:#34d399; padding:0.2rem 0.6rem; border-radius:999px; font-weight:600; margin-left:0.5rem;">Featured</span></h3>
+                        <h3>Google Data Analytics Professional Certificate <span
+                                style="font-size:0.75rem; background:rgba(6,214,160,0.15); color:#34d399; padding:0.2rem 0.6rem; border-radius:999px; font-weight:600; margin-left:0.5rem;">Featured</span>
+                        </h3>
                         <p class="issuer">Google (via Coursera)</p>
                         <p class="date">Issued June 2026</p>
-                        <p class="desc">A 9-course professional program covering the complete data analytics workflow: data collection, cleaning, preprocessing, SQL querying, R programming, and visualization using Tableau and spreadsheets. Includes capstone project with real-world business case analysis.</p>
+                        <p class="desc">A 9-course professional program covering the complete data analytics workflow:
+                            data collection, cleaning, preprocessing, SQL querying, R programming, and visualization
+                            using Tableau and spreadsheets. Includes capstone project with real-world business case
+                            analysis.</p>
                         <div class="certificate-links">
-                            <a href="https://github.com/120810121996/Certificate" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
-                            <a href="https://coursera.org/verify/professional-cert/1BM54FWSFY28" class="btn btn-outline" target="_blank"><i class="fas fa-external-link-alt"></i> Verify Online</a>
+                            <a href="https://github.com/120810121996/Certificate" class="btn" target="_blank"><i
+                                    class="fas fa-file-pdf"></i> View Certificate</a>
+                            <a href="https://coursera.org/verify/professional-cert/1BM54FWSFY28" class="btn btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Verify Online</a>
                         </div>
                     </div>
                 </div>
@@ -220,15 +537,19 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <div><strong>Email</strong><br><a href="mailto:kochiake.kanne@aims-cameroon.org">kochiake.kanne@aims-cameroon.org</a></div>
+                    <div><strong>Email</strong><br><a
+                            href="mailto:kochiake.kanne@aims-cameroon.org">kochiake.kanne@aims-cameroon.org</a></div>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/kochiake-kanne-tamibe-5a42882b7/" target="_blank">Kanne Tamibe Kochiake</a></div>
+                    <div><strong>LinkedIn</strong><br><a
+                            href="https://www.linkedin.com/in/kochiake-kanne-tamibe-5a42882b7/" target="_blank">Kanne
+                            Tamibe Kochiake</a></div>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
-                    <div><strong>GitHub</strong><br><a href="https://github.com/120810121996" target="_blank">120810121996</a></div>
+                    <div><strong>GitHub</strong><br><a href="https://github.com/120810121996"
+                            target="_blank">120810121996</a></div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
@@ -270,4 +591,5 @@
         });
     </script>
 </body>
+
 </html>
